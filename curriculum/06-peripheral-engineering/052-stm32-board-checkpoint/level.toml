@@ -1,0 +1,34 @@
+id = "stm32-board-checkpoint"
+title = "Bring Up the Nucleo-C031C6"
+version = "2.0.0"
+order = 520
+stage = 6
+activity = "hardware"
+duration_minutes = 50
+platform = "stm32"
+prerequisites = ["stm32-toolchain-checkpoint"]
+objectives = ["Explain board support in an embedded C context", "Apply GPIO with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "arm-build-report"
+name = "Structured evidence from the genuine ARM target build"
+type = "project_harness"
+harness = "checks/verify_build_report.py"
+timeout = 20
+required = true
+
+[[checks]]
+id = "physical-board-self-attestation"
+name = "Explicit learner-recorded board observations"
+type = "manual_evidence"
+path = "hardware-evidence.json"
+required_fields = ["board", "build_command", "elf_machine", "flash_tool", "led_toggled", "uart_observed", "notes"]
+required = true

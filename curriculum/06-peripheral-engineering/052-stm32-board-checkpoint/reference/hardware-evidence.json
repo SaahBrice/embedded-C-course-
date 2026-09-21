@@ -1,0 +1,9 @@
+{
+  "board": "NUCLEO-C031C6 FORMAT EXAMPLE",
+  "build_command": "make all",
+  "elf_machine": "ARM",
+  "flash_tool": "STM32CubeProgrammer",
+  "led_toggled": true,
+  "uart_observed": true,
+  "notes": "Replace this format example with observations from your own connected board."
+}

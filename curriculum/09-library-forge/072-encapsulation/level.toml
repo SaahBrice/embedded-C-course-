@@ -1,0 +1,28 @@
+id = "encapsulation"
+title = "Hide Library Internals"
+version = "2.0.0"
+order = 720
+stage = 9
+activity = "refactor"
+duration_minutes = 50
+platform = "host"
+prerequisites = ["api-design"]
+objectives = ["Explain public header in an embedded C context", "Apply private header with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "immutable-c-contract"
+name = "Strict build and immutable behavior tests"
+type = "c_harness"
+sources = ["task.c"]
+harness = "checks/test.c"
+cflags = ["-std=c11", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-O0", "-g"]
+timeout = 20
+required = true

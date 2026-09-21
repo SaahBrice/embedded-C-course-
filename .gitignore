@@ -1,0 +1,16 @@
+.learn/
+__pycache__/
+*.py[cod]
+*.o
+*.a
+program
+actual.txt
+build/
+cmake-build-*/
+platforms/host/tests/test_sim
+platforms/stm32c031/host/test_app
+platforms/stm32c031/host/test_target_adapter
+library/record_queue/tests/record_queue_tests
+examples/library-consumer/record_queue_consumer
+capstone/reference/logger_demo
+capstone/reference/tests/data_logger_tests

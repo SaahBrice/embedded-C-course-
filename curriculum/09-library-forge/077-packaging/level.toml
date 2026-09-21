@@ -1,0 +1,26 @@
+id = "packaging"
+title = "Install and Package a C Library"
+version = "2.0.0"
+order = 770
+stage = 9
+activity = "project"
+duration_minutes = 50
+platform = "host"
+prerequisites = ["library-testing"]
+objectives = ["Explain Make in an embedded C context", "Apply CMake with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "package-build-install-consume"
+name = "Make and CMake package plus relocated consumer"
+type = "project_harness"
+harness = "checks/verify_project.py"
+timeout = 60
+required = true

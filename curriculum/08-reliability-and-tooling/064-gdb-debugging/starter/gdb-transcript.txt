@@ -1,0 +1,10 @@
+# Supplied GDB transcript
+(gdb) break replace_value
+(gdb) run
+(gdb) watch values[3]
+Old value = 17
+New value = -1
+(gdb) bt
+#0 replace_value (values=0x..., count=3, target=17, replacement=-1) at faulty.c:8
+#1 main () at reproduce.c:12
+Diagnosis: the loop used index <= count and wrote values[3], one element past the array.

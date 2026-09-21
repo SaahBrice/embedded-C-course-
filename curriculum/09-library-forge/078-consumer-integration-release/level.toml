@@ -1,0 +1,26 @@
+id = "consumer-integration-release"
+title = "Release: Record Queue Library"
+version = "2.0.0"
+order = 780
+stage = 9
+activity = "project"
+duration_minutes = 50
+platform = "host"
+prerequisites = ["packaging"]
+objectives = ["Explain API in an embedded C context", "Apply tests with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "installed-consumer"
+name = "Strict relocated consumer against installed header and archive"
+type = "project_harness"
+harness = "checks/verify_consumer.py"
+timeout = 30
+required = true

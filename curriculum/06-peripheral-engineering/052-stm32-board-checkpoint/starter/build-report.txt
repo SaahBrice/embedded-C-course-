@@ -1,0 +1,2 @@
+NUCLEO-C031C6 target build
+TODO: paste build command, ELF machine line, and size output.

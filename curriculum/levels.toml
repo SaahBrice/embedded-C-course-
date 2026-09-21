@@ -1,0 +1,177 @@
+schema_version = 1
+
+[[levels]]
+id = "orientation-toolchain"
+title = "Orientation and Toolchain"
+order = 1
+objective = "Learn how a C source file becomes a running program and use compiler and debugger evidence to repair it."
+learning_outcomes = ["Compile and run a complete C program with exact output and exit status", "Read strict compiler diagnostics and repair type, range, and conversion defects", "Use binary, hexadecimal, build-stage, and debugger evidence to locate a defect"]
+overview = "01-orientation-and-toolchain/LEVEL.md"
+sublevels = ["first-build", "workstation-orientation", "compiler-warnings", "source-to-program", "binary-and-hex", "gdb-first-steps"]
+final_battle = "gdb-first-steps"
+final_integrates = ["compiler-warnings", "source-to-program", "binary-and-hex"]
+topic_practice = [
+  { topic = "strict diagnostics as defects", sublevels = ["first-build", "workstation-orientation", "compiler-warnings", "source-to-program", "binary-and-hex", "gdb-first-steps"] },
+  { topic = "source, translation, and linking", sublevels = ["first-build", "workstation-orientation", "compiler-warnings", "source-to-program", "gdb-first-steps"] },
+  { topic = "representation and debugging evidence", sublevels = ["workstation-orientation", "compiler-warnings", "source-to-program", "binary-and-hex", "gdb-first-steps"] },
+]
+
+[[levels]]
+id = "c-foundations"
+title = "C Foundations"
+order = 2
+objective = "Control C values and program flow through deliberate types, expressions, decisions, loops, functions, and validated input."
+learning_outcomes = ["Choose C types that match the range and meaning of firmware data", "Write decisions, loops, functions, and validated conversions with explicit boundaries", "Release a checked telemetry conversion component"]
+overview = "02-c-foundations/LEVEL.md"
+sublevels = ["integer-types", "floating-point-tradeoffs", "operators-expressions", "decisions", "loops", "functions", "scope-and-storage", "input-validation", "decomposition", "telemetry-cli-release"]
+final_battle = "telemetry-cli-release"
+final_integrates = ["floating-point-tradeoffs", "decisions", "input-validation"]
+topic_practice = [
+  { topic = "numeric representation and safe arithmetic", sublevels = ["integer-types", "floating-point-tradeoffs", "operators-expressions", "decisions", "loops", "telemetry-cli-release"] },
+  { topic = "control flow and decomposition", sublevels = ["operators-expressions", "decisions", "loops", "functions", "decomposition", "telemetry-cli-release"] },
+  { topic = "validated status-returning APIs", sublevels = ["functions", "scope-and-storage", "input-validation", "decomposition", "telemetry-cli-release"] },
+]
+
+[[levels]]
+id = "data-memory"
+title = "Data and Memory"
+order = 3
+objective = "Work safely with arrays, strings, pointers, object lifetime, structured data, byte layouts, and bounded storage."
+learning_outcomes = ["Use arrays, strings, pointers, and caller-owned output without crossing object bounds", "Reason about lifetime, tagged data, alignment, byte order, and fixed storage", "Release a binary packet parser that validates before committing output"]
+overview = "03-data-and-memory/LEVEL.md"
+sublevels = ["arrays", "strings", "pointers", "pointer-parameters", "memory-lifetime", "structs-unions-enums", "alignment-endianness", "dynamic-memory-policy", "packet-parser-release"]
+final_battle = "packet-parser-release"
+final_integrates = ["pointers", "structs-unions-enums", "alignment-endianness"]
+topic_practice = [
+  { topic = "bounded arrays and storage", sublevels = ["arrays", "strings", "pointers", "pointer-parameters", "dynamic-memory-policy", "packet-parser-release"] },
+  { topic = "pointer lifetime and ownership", sublevels = ["pointers", "pointer-parameters", "memory-lifetime", "structs-unions-enums", "dynamic-memory-policy", "packet-parser-release"] },
+  { topic = "typed and byte-level representation", sublevels = ["arrays", "pointer-parameters", "structs-unions-enums", "alignment-endianness", "packet-parser-release"] },
+]
+
+[[levels]]
+id = "professional-c"
+title = "Professional C"
+order = 4
+objective = "Build portable multi-file C modules with defensive interfaces, explicit errors, defined behavior, and typed dispatch."
+learning_outcomes = ["Separate declarations and definitions across translation units", "Design portable defensive interfaces with meaningful error results and defined behavior", "Release a reusable CRC module behind a stable public header"]
+overview = "04-professional-c/LEVEL.md"
+sublevels = ["headers-and-linking", "preprocessor-discipline", "defensive-apis", "error-models", "undefined-behavior", "portability", "function-pointers", "modular-library-release"]
+final_battle = "modular-library-release"
+final_integrates = ["headers-and-linking", "defensive-apis", "error-models"]
+topic_practice = [
+  { topic = "public interfaces and translation units", sublevels = ["headers-and-linking", "preprocessor-discipline", "defensive-apis", "error-models", "function-pointers", "modular-library-release"] },
+  { topic = "validation, errors, and defined behavior", sublevels = ["defensive-apis", "error-models", "undefined-behavior", "portability", "modular-library-release"] },
+  { topic = "portable operations and typed dispatch", sublevels = ["headers-and-linking", "undefined-behavior", "portability", "function-pointers", "modular-library-release"] },
+]
+
+[[levels]]
+id = "embedded-foundations"
+title = "Embedded Foundations"
+order = 5
+objective = "Connect portable C to CPU memory, exact-width values, register fields, qualifiers, electronics, and datasheets."
+learning_outcomes = ["Relate C expressions and qualifiers to CPU, memory, and peripheral-register behavior", "Build masks and exact-width operations from electronics and datasheet constraints", "Release a register-level GPIO configuration driver"]
+overview = "05-embedded-foundations/LEVEL.md"
+sublevels = ["cpu-memory-model", "fixed-width-integers", "register-masks", "const-and-volatile", "memory-mapped-io", "electronics-basics", "datasheet-reading", "register-driver-release"]
+final_battle = "register-driver-release"
+final_integrates = ["register-masks", "memory-mapped-io", "datasheet-reading"]
+topic_practice = [
+  { topic = "fixed-width register arithmetic", sublevels = ["cpu-memory-model", "fixed-width-integers", "register-masks", "const-and-volatile", "memory-mapped-io", "datasheet-reading", "register-driver-release"] },
+  { topic = "qualifiers and hardware access", sublevels = ["cpu-memory-model", "register-masks", "const-and-volatile", "memory-mapped-io", "electronics-basics", "register-driver-release"] },
+  { topic = "datasheet-driven driver design", sublevels = ["fixed-width-integers", "register-masks", "memory-mapped-io", "electronics-basics", "datasheet-reading", "register-driver-release"] },
+]
+
+[[levels]]
+id = "peripheral-engineering"
+title = "Peripheral Engineering"
+order = 6
+objective = "Control and integrate GPIO, time, interrupts, serial buses, analog conversion, and the STM32 board boundary."
+learning_outcomes = ["Drive GPIO, time, interrupts, UART, ADC, PWM, SPI, and I2C through deterministic simulations", "Keep blocking, ownership, range, and timeout behavior explicit at peripheral boundaries", "Build and observe the STM32 path before releasing a peripheral console"]
+overview = "06-peripheral-engineering/LEVEL.md"
+sublevels = ["gpio", "interrupts", "timers", "nonblocking-time", "uart", "adc", "pwm", "spi", "i2c", "stm32-toolchain-checkpoint", "stm32-board-checkpoint", "peripheral-console-release"]
+final_battle = "peripheral-console-release"
+final_integrates = ["gpio", "uart", "stm32-board-checkpoint"]
+topic_practice = [
+  { topic = "digital events, timing, and serial I/O", sublevels = ["gpio", "interrupts", "timers", "nonblocking-time", "uart", "spi", "i2c", "peripheral-console-release"] },
+  { topic = "range-checked peripheral conversion", sublevels = ["timers", "nonblocking-time", "adc", "pwm", "spi", "i2c", "peripheral-console-release"] },
+  { topic = "simulation through target integration", sublevels = ["gpio", "uart", "adc", "spi", "i2c", "stm32-toolchain-checkpoint", "stm32-board-checkpoint", "peripheral-console-release"] },
+]
+
+[[levels]]
+id = "firmware-architecture"
+title = "Firmware Architecture"
+order = 7
+objective = "Organize firmware around states, events, bounded queues, callbacks, configuration, and hardware-independent control."
+learning_outcomes = ["Organize behavior with states, events, callbacks, queues, and validated configuration", "Separate portable policy from hardware access through injected interfaces", "Release a bounded portable sensor controller"]
+overview = "07-firmware-architecture/LEVEL.md"
+sublevels = ["state-machines", "event-loops", "ring-buffers", "callbacks", "hal-design", "configuration", "resource-constraints", "controller-release"]
+final_battle = "controller-release"
+final_integrates = ["state-machines", "event-loops", "configuration"]
+topic_practice = [
+  { topic = "state, events, and scheduling", sublevels = ["state-machines", "event-loops", "ring-buffers", "callbacks", "resource-constraints", "controller-release"] },
+  { topic = "dependency injection and configuration", sublevels = ["callbacks", "hal-design", "configuration", "resource-constraints", "controller-release"] },
+  { topic = "bounded state ownership", sublevels = ["state-machines", "ring-buffers", "callbacks", "configuration", "resource-constraints", "controller-release"] },
+]
+
+[[levels]]
+id = "reliability-tooling"
+title = "Reliability and Tooling"
+order = 8
+objective = "Find and prevent defects with tests, debuggers, sanitizers, static analysis, safe arithmetic, concurrency rules, and secure parsing."
+learning_outcomes = ["Write tests that expose defects and use debugger, sanitizer, and analyzer evidence", "Prevent overflow, races, undefined behavior, and unsafe parsing", "Repair an intermittent logger-reset incident from reproducible evidence"]
+overview = "08-reliability-and-tooling/LEVEL.md"
+sublevels = ["unit-testing", "integration-testing", "gdb-debugging", "sanitizers", "static-analysis", "integer-overflow", "concurrency", "secure-c", "incident-response-release"]
+final_battle = "incident-response-release"
+final_integrates = ["static-analysis", "integer-overflow", "concurrency"]
+topic_practice = [
+  { topic = "executable defect evidence", sublevels = ["unit-testing", "integration-testing", "gdb-debugging", "sanitizers", "static-analysis", "incident-response-release"] },
+  { topic = "undefined behavior and data integrity", sublevels = ["sanitizers", "static-analysis", "integer-overflow", "concurrency", "secure-c", "incident-response-release"] },
+  { topic = "regression and recovery reasoning", sublevels = ["unit-testing", "integration-testing", "gdb-debugging", "concurrency", "secure-c", "incident-response-release"] },
+]
+
+[[levels]]
+id = "library-forge"
+title = "Library Forge"
+order = 9
+objective = "Turn embedded C into a documented, versioned, configurable, tested, installable library with private internals."
+learning_outcomes = ["Design a documented public API while keeping representation private", "Version, configure, test, build, install, and relocate a static C library", "Prove a consumer can use the record-queue library without source-tree access"]
+overview = "09-library-forge/LEVEL.md"
+sublevels = ["api-design", "encapsulation", "semantic-versioning", "library-configuration", "library-documentation", "library-testing", "packaging", "consumer-integration-release"]
+final_battle = "consumer-integration-release"
+final_integrates = ["library-documentation", "library-testing", "packaging"]
+topic_practice = [
+  { topic = "public API and encapsulation", sublevels = ["api-design", "encapsulation", "semantic-versioning", "library-configuration", "library-documentation", "consumer-integration-release"] },
+  { topic = "verification and release discipline", sublevels = ["semantic-versioning", "library-documentation", "library-testing", "packaging", "consumer-integration-release"] },
+  { topic = "build, install, and compatibility", sublevels = ["library-configuration", "library-documentation", "library-testing", "packaging", "consumer-integration-release"] },
+]
+
+[[levels]]
+id = "advanced-embedded"
+title = "Advanced Embedded Development"
+order = 10
+objective = "Reason about startup, linking, memory placement, boot safety, scheduling, deadlines, and appropriate RTOS use."
+learning_outcomes = ["Trace startup and linker responsibilities from reset through main", "Place memory deliberately and schedule bounded work against deadlines", "Choose a cooperative design or RTOS from measured constraints"]
+overview = "10-advanced-embedded-development/LEVEL.md"
+sublevels = ["startup-code", "linker-scripts", "memory-sections", "boot-flow", "cooperative-scheduler", "real-time-analysis", "rtos-concepts"]
+final_battle = "rtos-concepts"
+final_integrates = ["boot-flow", "cooperative-scheduler", "real-time-analysis"]
+topic_practice = [
+  { topic = "startup, linking, and memory layout", sublevels = ["startup-code", "linker-scripts", "memory-sections", "boot-flow", "real-time-analysis"] },
+  { topic = "bounded scheduling and deadlines", sublevels = ["startup-code", "boot-flow", "cooperative-scheduler", "real-time-analysis", "rtos-concepts"] },
+  { topic = "firmware architecture tradeoffs", sublevels = ["linker-scripts", "memory-sections", "boot-flow", "cooperative-scheduler", "real-time-analysis", "rtos-concepts"] },
+]
+
+[[levels]]
+id = "data-logger-capstone"
+title = "Sensor Data-Logger Capstone"
+order = 11
+objective = "Combine the course into a portable, allocation-free sensor data logger with deterministic adapters and failure handling."
+learning_outcomes = ["Turn requirements into injected sensor, time, storage, and transport interfaces", "Validate, buffer, serialize, persist, and retry records without dynamic allocation", "Release a portable data logger with deterministic failure-injection tests"]
+overview = "11-sensor-data-logger-capstone/LEVEL.md"
+sublevels = ["capstone-requirements", "capstone-architecture", "sensor-interface", "sample-validation", "timestamp-injection", "record-buffer", "record-serialization", "storage-interface", "transport-retry", "data-logger-integration", "data-logger-release"]
+final_battle = "data-logger-release"
+final_integrates = ["capstone-requirements", "record-serialization", "data-logger-integration"]
+topic_practice = [
+  { topic = "requirements and injected ports", sublevels = ["capstone-requirements", "capstone-architecture", "sensor-interface", "sample-validation", "timestamp-injection", "data-logger-integration", "data-logger-release"] },
+  { topic = "buffering, serialization, and persistence", sublevels = ["record-buffer", "record-serialization", "storage-interface", "transport-retry", "data-logger-integration", "data-logger-release"] },
+  { topic = "failure handling and integrated release", sublevels = ["sensor-interface", "sample-validation", "storage-interface", "transport-retry", "data-logger-integration", "data-logger-release"] },
+]

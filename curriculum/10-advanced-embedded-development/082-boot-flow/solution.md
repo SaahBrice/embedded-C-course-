@@ -1,0 +1,15 @@
+# Full solution: Design a Safe Boot Flow
+
+This worked implementation demonstrates reset cause, initialization order, safe state. Compare its observable behavior and boundaries with yours; different code is valid when it preserves the same contract.
+
+```c
+/* Mission: Design a Safe Boot Flow */
+#include "task.h"
+
+#include <errno.h>
+#include <limits.h>
+#include <stdlib.h>
+#include <string.h>
+
+enum boot_phase boot_next(enum boot_phase current,bool step_ok){if(!step_ok||current>=BOOT_READY)return BOOT_SAFE_OUTPUTS;return (enum boot_phase)(current+1);}
+```

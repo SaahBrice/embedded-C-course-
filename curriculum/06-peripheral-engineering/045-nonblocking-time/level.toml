@@ -1,0 +1,30 @@
+id = "nonblocking-time"
+title = "Replace Blocking Delays"
+version = "2.0.0"
+order = 450
+stage = 6
+activity = "refactor"
+duration_minutes = 50
+platform = "sim"
+prerequisites = ["timers"]
+objectives = ["Explain deadlines in an embedded C context", "Apply wrap-safe subtraction with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "immutable-c-contract"
+name = "Strict build and immutable behavior tests"
+type = "c_harness"
+sources = ["task.c"]
+harness = "checks/test.c"
+cflags = ["-std=c11", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-O0", "-g"]
+timeout = 20
+required = true
+support_sources = ["platforms/host/src/sim_timer.c"]
+support_include_dirs = ["platforms/host/include"]

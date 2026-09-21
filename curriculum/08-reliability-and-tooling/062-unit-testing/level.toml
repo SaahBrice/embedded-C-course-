@@ -1,0 +1,29 @@
+id = "unit-testing"
+title = "Test C Modules in Isolation"
+version = "2.0.0"
+order = 620
+stage = 8
+activity = "write"
+duration_minutes = 50
+platform = "host"
+prerequisites = ["controller-release"]
+objectives = ["Explain test fixture in an embedded C context", "Apply assertion with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "learner-tests-kill-defect"
+name = "Tests accept the good module and reject the defect"
+type = "c_test_pair"
+test_sources = ["test.c"]
+good_source = "checks/good_module.c"
+defective_source = "checks/defective_module.c"
+cflags = ["-std=c11", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-O0", "-g"]
+timeout = 20
+required = true

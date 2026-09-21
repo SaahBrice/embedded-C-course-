@@ -1,0 +1,29 @@
+id = "first-build"
+title = "Build Your First C Program"
+version = "2.0.0"
+order = 10
+stage = 1
+activity = "write"
+duration_minutes = 50
+platform = "host"
+prerequisites = []
+objectives = ["Explain translation in an embedded C context", "Apply main with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "first-program-output"
+name = "Strict compile and exact observable output"
+type = "c_program"
+sources = ["main.c"]
+expected_stdout = "firmware ready\n"
+expected_exit = 0
+cflags = ["-std=c11", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-O0", "-g"]
+timeout = 20
+required = true

@@ -1,0 +1,4 @@
+NUCLEO-C031C6 target build FORMAT EXAMPLE
+Build command: make all STM32CUBE_C0=/path/to/STM32CubeC0
+ELF: build/nucleo-c031c6.elf
+Machine: ARM

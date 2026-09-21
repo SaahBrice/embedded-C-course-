@@ -1,0 +1,9 @@
+{
+  "board": "NUCLEO-C031C6",
+  "build_command": "",
+  "elf_machine": "",
+  "flash_tool": "",
+  "led_toggled": false,
+  "uart_observed": false,
+  "notes": ""
+}

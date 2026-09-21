@@ -1,0 +1,15 @@
+{
+  "completed": {
+    "first-build": {
+      "attempt_id": "first-build--001",
+      "completed_at": "2026-09-11T21:29:13Z",
+      "version": "2.0.0"
+    },
+    "workstation-orientation": {
+      "attempt_id": "workstation-orientation--001",
+      "completed_at": "2026-09-11T19:57:49Z",
+      "version": "1.0.0"
+    }
+  },
+  "schema_version": 1
+}

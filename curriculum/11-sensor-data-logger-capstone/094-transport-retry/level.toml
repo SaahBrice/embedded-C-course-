@@ -1,0 +1,28 @@
+id = "transport-retry"
+title = "Capstone: Export Reliably"
+version = "2.0.0"
+order = 940
+stage = 11
+activity = "write"
+duration_minutes = 50
+platform = "host"
+prerequisites = ["storage-interface"]
+objectives = ["Explain transport port in an embedded C context", "Apply bounded retry with explicit boundary behavior", "Produce and interpret executable engineering evidence"]
+starter = "starter"
+hints = ["hints/01.md", "hints/02.md", "hints/03.md"]
+
+[content]
+briefing = "briefing.md"
+lesson = "lesson.md"
+debrief = "debrief.md"
+solution = "solution.md"
+
+[[checks]]
+id = "immutable-c-contract"
+name = "Strict build and immutable behavior tests"
+type = "c_harness"
+sources = ["task.c"]
+harness = "checks/test.c"
+cflags = ["-std=c11", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-O0", "-g"]
+timeout = 20
+required = true

@@ -1,0 +1,102 @@
+{
+  "cleared_levels": {
+    "c-foundations": {
+      "attempt_id": "telemetry-cli-release--001",
+      "completed_at": "2026-09-22T13:56:26Z",
+      "final_battle_id": "telemetry-cli-release"
+    },
+    "orientation-toolchain": {
+      "attempt_id": "gdb-first-steps--001",
+      "completed_at": "2026-09-22T11:54:42Z",
+      "final_battle_id": "gdb-first-steps"
+    }
+  },
+  "completed": {
+    "arrays": {
+      "attempt_id": "arrays--001",
+      "completed_at": "2026-09-22T14:17:22Z",
+      "version": "2.0.0"
+    },
+    "binary-and-hex": {
+      "attempt_id": "binary-and-hex--001",
+      "completed_at": "2026-09-21T13:03:09Z",
+      "version": "2.0.0"
+    },
+    "compiler-warnings": {
+      "attempt_id": "compiler-warnings--001",
+      "completed_at": "2026-09-21T12:32:31Z",
+      "version": "2.0.0"
+    },
+    "decisions": {
+      "attempt_id": "decisions--001",
+      "completed_at": "2026-09-22T12:28:51Z",
+      "version": "2.0.0"
+    },
+    "decomposition": {
+      "attempt_id": "decomposition--001",
+      "completed_at": "2026-09-22T13:29:42Z",
+      "version": "2.0.0"
+    },
+    "first-build": {
+      "attempt_id": "first-build--001",
+      "completed_at": "2026-09-12T23:09:15Z",
+      "version": "2.0.0"
+    },
+    "floating-point-tradeoffs": {
+      "attempt_id": "floating-point-tradeoffs--001",
+      "completed_at": "2026-09-22T12:24:09Z",
+      "version": "2.0.0"
+    },
+    "functions": {
+      "attempt_id": "functions--001",
+      "completed_at": "2026-09-22T12:55:21Z",
+      "version": "2.0.0"
+    },
+    "gdb-first-steps": {
+      "attempt_id": "gdb-first-steps--001",
+      "completed_at": "2026-09-22T11:54:42Z",
+      "version": "2.0.0"
+    },
+    "input-validation": {
+      "attempt_id": "input-validation--001",
+      "completed_at": "2026-09-22T13:18:56Z",
+      "version": "2.0.0"
+    },
+    "integer-types": {
+      "attempt_id": "integer-types--001",
+      "completed_at": "2026-09-22T12:01:07Z",
+      "version": "2.0.0"
+    },
+    "loops": {
+      "attempt_id": "loops--001",
+      "completed_at": "2026-09-22T12:46:42Z",
+      "version": "2.0.0"
+    },
+    "operators-expressions": {
+      "attempt_id": "operators-expressions--001",
+      "completed_at": "2026-09-22T12:26:50Z",
+      "version": "2.0.0"
+    },
+    "scope-and-storage": {
+      "attempt_id": "scope-and-storage--001",
+      "completed_at": "2026-09-22T13:03:07Z",
+      "version": "2.0.0"
+    },
+    "source-to-program": {
+      "attempt_id": "source-to-program--001",
+      "completed_at": "2026-09-21T12:43:16Z",
+      "version": "2.0.0"
+    },
+    "telemetry-cli-release": {
+      "attempt_id": "telemetry-cli-release--001",
+      "completed_at": "2026-09-22T13:56:26Z",
+      "version": "2.0.0"
+    },
+    "workstation-orientation": {
+      "attempt_id": "workstation-orientation--001",
+      "completed_at": "2026-09-12T23:25:12Z",
+      "version": "2.0.0"
+    }
+  },
+  "schema_version": 2
+}

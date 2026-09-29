@@ -1,9 +1,11 @@
 {
+  "alignment-endianness": 1,
   "arrays": 1,
   "binary-and-hex": 1,
   "compiler-warnings": 1,
   "decisions": 1,
   "decomposition": 1,
+  "dynamic-memory-policy": 1,
   "first-build": 1,
   "floating-point-tradeoffs": 1,
   "functions": 1,
@@ -11,12 +13,15 @@
   "input-validation": 1,
   "integer-types": 1,
   "loops": 1,
+  "memory-lifetime": 1,
   "operators-expressions": 1,
+  "packet-parser-release": 1,
   "pointer-parameters": 1,
   "pointers": 1,
   "scope-and-storage": 1,
   "source-to-program": 1,
   "strings": 1,
+  "structs-unions-enums": 1,
   "telemetry-cli-release": 1,
   "workstation-orientation": 1
 }

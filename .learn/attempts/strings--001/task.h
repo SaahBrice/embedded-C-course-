@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <string.h>
 
 bool buffer_append(char *destination, size_t capacity, const char *suffix);
 

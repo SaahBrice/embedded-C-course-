@@ -87,6 +87,11 @@
       "completed_at": "2026-09-21T12:43:16Z",
       "version": "2.0.0"
     },
+    "strings": {
+      "attempt_id": "strings--001",
+      "completed_at": "2026-09-29T11:09:02Z",
+      "version": "2.0.0"
+    },
     "telemetry-cli-release": {
       "attempt_id": "telemetry-cli-release--001",
       "completed_at": "2026-09-22T13:56:26Z",

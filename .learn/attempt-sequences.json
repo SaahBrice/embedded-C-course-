@@ -12,6 +12,7 @@
   "integer-types": 1,
   "loops": 1,
   "operators-expressions": 1,
+  "pointer-parameters": 1,
   "pointers": 1,
   "scope-and-storage": 1,
   "source-to-program": 1,
